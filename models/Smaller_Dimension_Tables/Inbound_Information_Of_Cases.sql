@@ -1,3 +1,5 @@
+{{config( materialized='table')}}
+
 with Inbound as 
 (
     select 
@@ -9,7 +11,7 @@ with Inbound as
     new_recovered as NEW_RECOVERED 
     from FIVETRAN_INTERVIEW_DB.GOOGLE_SHEETS.COVID_19_INDONESIA_ARVIND_GUNASEKARAN
     order by date
-    
+
 )
 
 select * from Inbound

@@ -1,3 +1,5 @@
+{{config( materialized='table')}}
+
 with location_info as 
 (
     select 
